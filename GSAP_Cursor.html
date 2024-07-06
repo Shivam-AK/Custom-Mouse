@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body,
+        html {
+            width: 100%;
+            background: #111;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        #cursor {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: fixed;
+            -webkit-mix-blend-mode: difference;
+            -moz-mix-blend-mode: difference;
+            -o-mix-blend-mode: difference;
+            -ms-mix-blend-mode: difference;
+            mix-blend-mode: difference;
+        }
+        .content{
+            width: 75%;
+            height: fit-content;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .content svg{
+            width: 100%;
+        }
+
+        .content .heading{
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .content p{
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="main">
+        <div class="content">
+            <svg class="expert-block__svg" viewBox="0 0 620 249" fill="none">
+                <path fill="#fff" fill-rule="evenodd"
+                    d="m579.592 152.099-17.778.069a3.828 3.828 0 0 0 0 7.656l17.778.069-12.523 12.62a3.828 3.828 0 0 0 5.414 5.414l12.62-12.523.069 17.779a3.828 3.828 0 0 0 7.656 0l.069-17.779 12.62 12.523a3.828 3.828 0 0 0 5.414-5.414l-12.523-12.62 17.778-.069a3.828 3.828 0 0 0 0-7.656l-17.778-.069 12.523-12.62a3.828 3.828 0 0 0-5.414-5.414l-12.62 12.523-.069-17.778a3.828 3.828 0 0 0-7.656 0l-.069 17.778-12.62-12.523a3.828 3.828 0 0 0-5.414 5.414l12.523 12.62Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#a)" fill-rule="evenodd"
+                    d="m579.592 152.099-17.778.069a3.828 3.828 0 0 0 0 7.656l17.778.069-12.523 12.62a3.828 3.828 0 0 0 5.414 5.414l12.62-12.523.069 17.779a3.828 3.828 0 0 0 7.656 0l.069-17.779 12.62 12.523a3.828 3.828 0 0 0 5.414-5.414l-12.523-12.62 17.778-.069a3.828 3.828 0 0 0 0-7.656l-17.778-.069 12.523-12.62a3.828 3.828 0 0 0-5.414-5.414l-12.62 12.523-.069-17.778a3.828 3.828 0 0 0-7.656 0l-.069 17.778-12.62-12.523a3.828 3.828 0 0 0-5.414 5.414l12.523 12.62Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#b)" fill-rule="evenodd"
+                    d="m579.592 152.099-17.778.069a3.828 3.828 0 0 0 0 7.656l17.778.069-12.523 12.62a3.828 3.828 0 0 0 5.414 5.414l12.62-12.523.069 17.779a3.828 3.828 0 0 0 7.656 0l.069-17.779 12.62 12.523a3.828 3.828 0 0 0 5.414-5.414l-12.523-12.62 17.778-.069a3.828 3.828 0 0 0 0-7.656l-17.778-.069 12.523-12.62a3.828 3.828 0 0 0-5.414-5.414l-12.62 12.523-.069-17.778a3.828 3.828 0 0 0-7.656 0l-.069 17.778-12.62-12.523a3.828 3.828 0 0 0-5.414 5.414l12.523 12.62Z"
+                    clip-rule="evenodd" style="mix-blend-mode: multiply;"></path>
+                <path fill="url(#c)" fill-rule="evenodd"
+                    d="M514.159 106.841a62 62 0 0 0 39.843 18.03c2.205.142 3.998-1.662 3.998-3.871V5c0-2.21-1.793-4.013-3.998-3.871A62.002 62.002 0 0 0 496 63V5c0-2.21-1.793-4.013-3.998-3.871A62.002 62.002 0 0 0 434 63a62.002 62.002 0 0 0 58.002 61.871c2.205.142 3.998-1.662 3.998-3.871V63a62.002 62.002 0 0 0 18.159 43.841Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#d)" fill-rule="evenodd"
+                    d="M514.159 106.841a62 62 0 0 0 39.843 18.03c2.205.142 3.998-1.662 3.998-3.871V5c0-2.21-1.793-4.013-3.998-3.871A62.002 62.002 0 0 0 496 63V5c0-2.21-1.793-4.013-3.998-3.871A62.002 62.002 0 0 0 434 63a62.002 62.002 0 0 0 58.002 61.871c2.205.142 3.998-1.662 3.998-3.871V63a62.002 62.002 0 0 0 18.159 43.841Z"
+                    clip-rule="evenodd" style="mix-blend-mode: multiply;"></path>
+                <path fill="url(#e)" fill-rule="evenodd"
+                    d="M34.253 91.19a4 4 0 0 0 0 5.612l21.05 21.388c2.488 2.529.697 6.806-2.852 6.806H9.55c-3.549 0-5.34-4.277-2.851-6.806l21.049-21.388a4 4 0 0 0 0-5.612L6.697 69.802C4.21 67.272 6 62.996 9.55 62.996H52.45c3.549 0 5.34 4.277 2.851 6.806L34.253 91.19Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#f)" fill-rule="evenodd"
+                    d="M34.253 91.19a4 4 0 0 0 0 5.612l21.05 21.388c2.488 2.529.697 6.806-2.852 6.806H9.55c-3.549 0-5.34-4.277-2.851-6.806l21.049-21.388a4 4 0 0 0 0-5.612L6.697 69.802C4.21 67.272 6 62.996 9.55 62.996H52.45c3.549 0 5.34 4.277 2.851 6.806L34.253 91.19Z"
+                    clip-rule="evenodd" style="mix-blend-mode: multiply;"></path>
+                <path fill="url(#g)" fill-rule="evenodd"
+                    d="M248 124.996c34.242 0 62-27.758 62-62 0 34.242 27.758 62 62 62-34.242 0-62 27.758-62 62 0-34.242-27.758-62-62-62Zm0 0c-34.242 0-62 27.758-62 62 0 34.242 27.758 62 62 62 34.242 0 62-27.758 62-62 0 34.242 27.758 62 62 62 34.242 0 62-27.758 62-62 0-34.242-27.758-62-62-62 34.242 0 62-27.758 62-62 0-34.242-27.758-62-62-62-34.242 0-62 27.758-62 62 0-34.242-27.758-62-62-62-34.242 0-62 27.758-62 62 0 34.242 27.758 62 62 62Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#h)" fill-rule="evenodd"
+                    d="M248 124.996c34.242 0 62-27.758 62-62 0 34.242 27.758 62 62 62-34.242 0-62 27.758-62 62 0-34.242-27.758-62-62-62Zm0 0c-34.242 0-62 27.758-62 62 0 34.242 27.758 62 62 62 34.242 0 62-27.758 62-62 0 34.242 27.758 62 62 62 34.242 0 62-27.758 62-62 0-34.242-27.758-62-62-62 34.242 0 62-27.758 62-62 0-34.242-27.758-62-62-62-34.242 0-62 27.758-62 62 0-34.242-27.758-62-62-62-34.242 0-62 27.758-62 62 0 34.242 27.758 62 62 62Z"
+                    clip-rule="evenodd" style="mix-blend-mode: multiply;"></path>
+                <path fill="url(#i)" fill-rule="evenodd"
+                    d="M62 124.996h42v41h40v-41h42v42h-41v40h41v42h-42v-41h-40v41H62v-42h41v-40H62v-42Z"
+                    clip-rule="evenodd"></path>
+                <path fill="url(#j)" fill-opacity=".6" fill-rule="evenodd"
+                    d="M62 124.996h42v41h40v-41h42v42h-41v40h41v42h-42v-41h-40v41H62v-42h41v-40H62v-42Z"
+                    clip-rule="evenodd" style="mix-blend-mode: multiply;"></path>
+                <defs>
+                    <pattern id="b" width="1.613" height="1.613" patternContentUnits="objectBoundingBox">
+                        <use xlink:href="#k" transform="scale(.00323)"></use>
+                    </pattern>
+                    <pattern id="d" width=".806" height=".806" patternContentUnits="objectBoundingBox">
+                        <use xlink:href="#k" transform="scale(.00161)"></use>
+                    </pattern>
+                    <pattern id="f" width="1.613" height="1.613" patternContentUnits="objectBoundingBox">
+                        <use xlink:href="#k" transform="scale(.00323)"></use>
+                    </pattern>
+                    <pattern id="h" width=".403" height=".403" patternContentUnits="objectBoundingBox">
+                        <use xlink:href="#k" transform="scale(.0008)"></use>
+                    </pattern>
+                    <pattern id="j" width=".806" height=".806" patternContentUnits="objectBoundingBox">
+                        <use xlink:href="#k" transform="scale(.00161)"></use>
+                    </pattern>
+                    <radialGradient id="a" cx="0" cy="0" r="1"
+                        gradientTransform="rotate(-90 373.268 -203.81) scale(48.8381)" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFEBE7"></stop>
+                        <stop offset=".672" stop-color="#FF9C7C"></stop>
+                        <stop offset=".816" stop-color="#FF9983"></stop>
+                        <stop offset=".901" stop-color="#FF774B"></stop>
+                        <stop offset="1" stop-color="#E76F00"></stop>
+                    </radialGradient>
+                    <radialGradient id="c" cx="0" cy="0" r="1"
+                        gradientTransform="rotate(-45 359.433 -563.882) scale(118.794)" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E193FF"></stop>
+                        <stop offset=".672" stop-color="#8E78DA"></stop>
+                        <stop offset=".738" stop-color="#937DDB"></stop>
+                        <stop offset=".816" stop-color="#A28BDD"></stop>
+                        <stop offset=".901" stop-color="#BAA3E2"></stop>
+                        <stop offset=".991" stop-color="#DBC3E7"></stop>
+                        <stop offset="1" stop-color="#DFC7E8"></stop>
+                    </radialGradient>
+                    <radialGradient id="g" cx="0" cy="0" r="1"
+                        gradientTransform="rotate(-77.196 236.017 -44.409) scale(215.197 226.558)"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E7EDFF"></stop>
+                        <stop offset=".672" stop-color="#7C99FF"></stop>
+                        <stop offset=".802" stop-color="#4B73FF"></stop>
+                        <stop offset="1" stop-color="#0033E7"></stop>
+                    </radialGradient>
+                    <radialGradient id="i" cx="0" cy="0" r="1"
+                        gradientTransform="rotate(-144.904 122.647 79.278) scale(129.404 106.481)"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E9FFEF"></stop>
+                        <stop offset=".682" stop-color="#00C773"></stop>
+                        <stop offset="1" stop-color="#0060EF"></stop>
+                    </radialGradient>
+                    <linearGradient id="e" x1="-2.052" x2="60.718" y1="61.044" y2="139.768"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset=".27" stop-color="#FEC5FB"></stop>
+                        <stop offset=".838" stop-color="#00BAE2"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <h2 class="heading">Ask a GSAP expert</h2>
+            <p>Need a bespoke answer to a complex question? We offer a
+                consultancy service for individuals who need special help with their projects.</p>
+                <button>Click Here</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        const main = document.querySelector("#main")
+        const cursor = document.querySelector("#cursor")
+        const content = document.querySelector(".content")
+        const button = document.querySelector("button")
+
+        main.addEventListener("mousemove", (e) => {
+            // console.log("Move", e);
+            gsap.to(cursor, {
+                x: e.x - 10,
+                y: e.y - 10,
+                duration: 1,
+                ease: "back.out(4)",
+            })
+        })
+
+        content.addEventListener("mouseenter", () => {
+            cursor.innerHTML = 'View More'
+            
+            gsap.to(cursor, {
+                scale: 4,
+
+            })
+        })
+        content.addEventListener("mouseleave", () => {
+            cursor.innerHTML = ''
+            gsap.to(cursor, {
+                scale: 1,
+
+            })
+        })
+
+        button.addEventListener('Click', function () {
+            this.cursorEnlarged = true
+            button.style.background = "red"
+        })
+    </script>
+</body>
+
+</html>
