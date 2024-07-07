@@ -13,9 +13,9 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        body,
-        html {
+        html,body {
             width: 100%;
+            height: 100%;
             background: #111;
         }
 
@@ -25,7 +25,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 30px 0;
         }
 
         #cursor {
@@ -34,38 +33,46 @@
             background-color: #fff;
             border-radius: 50%;
             position: fixed;
-            -webkit-mix-blend-mode: difference;
+            font-size: 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            pointer-events: none; /* important for Clickable  */
+            z-index: 1000;
+            /* -webkit-mix-blend-mode: difference;
             -moz-mix-blend-mode: difference;
             -o-mix-blend-mode: difference;
             -ms-mix-blend-mode: difference;
-            mix-blend-mode: difference;
+            mix-blend-mode: difference; */
         }
-        .content{
-            width: 75%;
+
+        .content {
+            width: 60%;
             height: fit-content;
             border: 2px solid white;
             padding: 20px;
             border-radius: 30px;
         }
 
-        .content svg{
+        .content svg {
             width: 100%;
         }
 
-        .content .heading{
+        .content .heading {
             color: #fff;
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        
-        .content p{
+
+        .content p {
             color: #fff;
             margin-bottom: 15px;
         }
 
-        button{
+        button {
             padding: 10px 20px;
-            border: none;
+            border-width: 4px;
+            border-color: #fff;
             border-radius: 20px;
             font-size: 18px;
         }
@@ -76,7 +83,7 @@
     <div id="cursor"></div>
     <div id="main">
         <div class="content">
-            <svg class="expert-block__svg" viewBox="0 0 620 249" fill="none">
+            <svg viewBox="0 0 620 249" fill="none">
                 <path fill="#fff" fill-rule="evenodd"
                     d="m579.592 152.099-17.778.069a3.828 3.828 0 0 0 0 7.656l17.778.069-12.523 12.62a3.828 3.828 0 0 0 5.414 5.414l12.62-12.523.069 17.779a3.828 3.828 0 0 0 7.656 0l.069-17.779 12.62 12.523a3.828 3.828 0 0 0 5.414-5.414l-12.523-12.62 17.778-.069a3.828 3.828 0 0 0 0-7.656l-17.778-.069 12.523-12.62a3.828 3.828 0 0 0-5.414-5.414l-12.62 12.523-.069-17.778a3.828 3.828 0 0 0-7.656 0l-.069 17.778-12.62-12.523a3.828 3.828 0 0 0-5.414 5.414l12.523 12.62Z"
                     clip-rule="evenodd"></path>
@@ -169,7 +176,7 @@
             <h2 class="heading">Ask a GSAP expert</h2>
             <p>Need a bespoke answer to a complex question? We offer a
                 consultancy service for individuals who need special help with their projects.</p>
-                <button>Click Here</button>
+            <button>Click Here</button>
         </div>
     </div>
 
@@ -188,31 +195,31 @@
             gsap.to(cursor, {
                 x: e.x - 10,
                 y: e.y - 10,
-                duration: 1,
-                ease: "back.out(4)",
+                duration: .5,
             })
         })
 
         content.addEventListener("mouseenter", () => {
             cursor.innerHTML = 'View More'
-            
             gsap.to(cursor, {
                 scale: 4,
-
+                backgroundColor: '#ffffff66',
             })
         })
         content.addEventListener("mouseleave", () => {
             cursor.innerHTML = ''
             gsap.to(cursor, {
                 scale: 1,
-
+                backgroundColor: '#fff',
             })
         })
 
-        button.addEventListener('Click', function () {
-            this.cursorEnlarged = true
-            button.style.background = "red"
-        })
+        // document.addEventListener('mousedown', function () {
+        //     this.cursorEnlarged = true;
+        // });
+        // document.addEventListener('mouseup', function () {
+        //     this.cursorEnlarged = false;
+        // });
     </script>
 </body>
 
